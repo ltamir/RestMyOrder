@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sqliteLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Restaurant">
+
+    <TextView
+        android:id="@+id/lblSqliteTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/sqliteFrag_lbl_desc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sqliteLayout" />
+
+    <Spinner
+        android:id="@+id/cmbSqliteQueries"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/lblSqliteTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></Spinner>
+
+    <EditText
+        android:id="@+id/txtSqliteQuery"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:inputType="textMultiLine"
+        android:lines="2"
+        android:hint="Select statement"
+        android:textDirection="ltr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cmdSubmitQuery"
+        app:layout_constraintTop_toBottomOf="@+id/cmbSqliteQueries" />
+
+    <Button
+        android:id="@+id/cmdSubmitQuery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/sqliteFrag_btnSubmit"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textStyle="bold"
+        style="?android:attr/buttonBarButtonStyle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cmbSqliteQueries" />
+
+    <GridView
+        android:id="@+id/sqliteFrag_grdHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="53dp"
+        android:layout_marginTop="8dp"
+        android:gravity="start"
+        android:horizontalSpacing="2dp"
+        android:numColumns="4"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="5dp"
+        android:background="@android:color/holo_orange_light"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSqliteQuery" />
+
+    <GridView
+        android:id="@+id/sqliteFrag_grdResult"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:gravity="start"
+        android:horizontalSpacing="1dp"
+        android:numColumns="4"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sqliteFrag_grdHeader" />
+
+
+</android.support.constraint.ConstraintLayout>

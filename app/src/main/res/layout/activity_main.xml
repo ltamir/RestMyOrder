@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top|center"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/userName"
+        android:labelFor="@id/txtUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_username" />
+
+    <EditText
+        android:id="@+id/txtUserName"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:textDirection="ltr"
+        android:tooltipText="email" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_password"
+        android:labelFor="@id/txtPassword"/>
+
+    <EditText
+        android:id="@+id/txtPassword"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberPassword" />
+
+    <Button
+        android:id="@+id/cmdLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="login"
+        android:text="@string/login_enter" />
+
+    <ListView
+        android:id="@+id/lstUsers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical" />
+</LinearLayout>

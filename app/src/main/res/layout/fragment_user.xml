@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/userFrag_txt_fulName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/userFrag_full_name"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- email -->
+    <View
+        android:id="@+id/userFrag_hr_to_email"
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:background="#DEDEDE"
+        app:layout_constraintTop_toBottomOf="@+id/userFrag_txt_fulName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+        android:id="@+id/userFrag_txt_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/userFrag_email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userFrag_hr_to_email"/>
+
+    <!-- Password -->
+    <View
+        android:id="@+id/userFrag_hr_to_password"
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:background="#DEDEDE"
+        app:layout_constraintTop_toBottomOf="@+id/userFrag_txt_email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+        android:id="@+id/userFrag_txt_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/userFrag_password"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userFrag_hr_to_password"/>
+
+    <!-- Role -->
+    <View
+        android:id="@+id/userFrag_hr_to_role"
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:background="#DEDEDE"
+        app:layout_constraintTop_toBottomOf="@+id/userFrag_txt_password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/userFrag_lbl_role"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="3dip"
+        android:text="@string/userFrag_role"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userFrag_hr_to_role" />
+
+    <Spinner
+        android:id="@+id/userFrag_cmb_role"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        app:layout_constraintStart_toEndOf="@+id/userFrag_lbl_role"
+        app:layout_constraintTop_toBottomOf="@+id/userFrag_hr_to_role" />
+
+    <!-- -->
+
+    <View
+        android:id="@+id/userFrag_hr_button"
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:background="#DEDEDE"
+        app:layout_constraintTop_toBottomOf="@+id/userFrag_cmb_role"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/userFrag_cmd_handleUser"
+        style="?android:attr/buttonBarNeutralButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/userFrag_handleUser"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userFrag_hr_button" />
+
+    <Button
+        android:id="@+id/userFrag_cmd_newUser"
+        style="?android:attr/buttonBarNeutralButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/userFrag_new_user"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/userFrag_cmd_handleUser"
+        app:layout_constraintTop_toBottomOf="@+id/userFrag_hr_button" />
+
+
+    <!-- 5th row horizontal line-->
+    <View
+        android:id="@+id/userFrag_hr_detail"
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:background="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@+id/userFrag_cmd_handleUser"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 6th row grid header-->
+    <include
+        android:id="@+id/userFrag_dish_list_header"
+        layout="@layout/user_list_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userFrag_hr_detail" />
+
+    <!-- 6th row grid data-->
+    <GridView
+        android:id="@+id/userFrag_grdDishList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:columnWidth="90dp"
+        android:gravity="center"
+        android:horizontalSpacing="10dp"
+        android:numColumns="1"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userFrag_dish_list_header"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

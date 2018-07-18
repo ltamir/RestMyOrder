@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_orange_dark">
+
+    <TextView
+        android:id="@+id/kitchenFragHeaderSit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|top"
+        android:layout_marginTop="8dp"
+        android:text="@string/sit_title"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/kitchenFragHeaderDish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|top"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/kitchenFrag_header_dish"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toEndOf="@+id/kitchenFragHeaderSit"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/kitchenFragHeaderComments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|top"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        android:background="@android:color/holo_orange_dark"
+        android:textColor="@android:color/white"
+        android:text="@string/kitchenFrag_header_comments"
+        app:layout_constraintEnd_toStartOf="@+id/kitchenFragHeaderPrice"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/kitchenFragHeaderPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|top"
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/kitchenFrag_header_price"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toStartOf="@+id/kitchenFragHeaderIsReady"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/kitchenFragHeaderIsReady"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/kitchenFrag_header_is_ready"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toStartOf="@+id/kitchenFragHeaderIsServed"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/kitchenFragHeaderIsServed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|top"
+        android:layout_marginTop="8dp"
+        android:text="@string/kitchenFrag_header_is_served"
+        android:textStyle="bold"
+        android:background="@android:color/holo_orange_dark"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"  />
+</android.support.constraint.ConstraintLayout>
